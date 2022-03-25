@@ -1,0 +1,59 @@
+@import '_variables';
+@import '_fonts';
+@import '_loader';
+@import '_pinWall';
+
+body {
+  background: $dark url('../img/starring.png');
+  margin: 50px 20px 75px;
+  overflow-x: hidden;
+  user-select: none;
+}
+
+.newpin {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.fantasyFont {
+  font-family: 'Macondo', fantasy !important;
+}
+
+.navSatyr {
+  height: 50px;
+  margin: -10px 1.25em 0 auto;
+}
+
+/* Hotfix for styles from semantic-ui-css that interfere with
+ * react-masonry-component transitions. Changed durations to 0s from 0.1s and
+ * transition-timing-function to linear from ease, which mostly seems to
+ * nullify the conflict. */
+.ui.card,
+.ui.cards > .card {
+  -webkit-transition: box-shadow 0s linear, -webkit-transform 0s linear;
+  transition: box-shadow 0s linear, -webkit-transform 0s linear;
+  transition: box-shadow 0s linear, transform 0s linear;
+  transition: box-shadow 0s linear, transform 0s linear, -webkit-transform 0s linear;
+}
+
+.magnify {
+  cursor: zoom-in;
+}
+
+.noLike:hover {
+  cursor: not-allowed !important;
+}
+$red: #DB2828;
+$grey: #767676;
+$orange: #F2711C;
+$yellow: #FBBD08;
+
+.hintPopup {
+  background-color: $yellow !important;
+
+  &:before {
+    background-color: $yellow !important;
+
+  }
+}

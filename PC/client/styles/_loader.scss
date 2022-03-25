@@ -1,0 +1,269 @@
+/*
+
+Figure inspired by Evil Loader
+https://codepen.io/woodiz/pen/KCrin
+
+Swirling background inspired by CSS3 Loaders #4
+https://codepen.io/Siddharth11/pen/xbGrpG
+
+*/
+// The predim effect mimics the React Dimmer before that kicks in
+.predim {
+  background: transparent;
+  background: rgba(0,0,0, 0.85);
+  bottom: 0;
+  height: 100vh;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100vw;
+  z-index: -1;
+}
+
+.loader {
+  //Circular frame
+  .circ {
+    backface-visibility: hidden;
+    background-color: $dark;
+    border: 1px solid $dark;
+    border-radius: 50%;
+    bottom: 0;
+    height: 250px;
+    left: 0;
+    margin: auto;
+    overflow: hidden;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 250px;
+    z-index: -1;
+  }
+
+  /* FIGURE START */
+  //Head
+  @keyframes head {
+    0% {
+      top: 0;
+    }
+
+    50% {
+      top: 10px;
+    }
+
+    100% {
+      top: 0;
+    }
+  }
+
+  .head {
+    animation: head 1.7s infinite alternate;
+    animation-timing-function: ease-out;
+    backface-visibility: hidden;
+    background-color: $dark;
+    border-radius: 50px;
+    box-shadow: inset -4px 2px 0 0 $light;
+    height: 80px;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    width: 80px;
+
+    .eye {
+      box-shadow: 32px 0 0 0 $light;
+      width: 16px;
+      height: 4px;
+      background-color: $light;
+      border-radius: 0 0 20px 20px;
+      position: absolute;
+      top: 43px;
+      left: 16px;
+    }
+
+    .cheeks {
+      background-color: $dark;
+      border-radius: 0 0 30px 30px;
+      box-shadow: 40px 0 0 0 $dark;
+      height: 10px;
+      left: 6.5px;
+      position: absolute;
+      top: 49px;
+      width: 28px;
+      z-index: 1;
+
+    }
+
+    .lip {
+      background-color: $dark;
+      border-bottom-right-radius: 100%;
+      bottom: 0;
+      height: 6px;
+      left: 0;
+      margin: auto auto 6px;
+      position: absolute;
+      right: 0;
+      top: 0;
+      transform: rotate(45deg);
+      width: 6px;
+      z-index: 1;
+
+    }
+
+    .beard {
+      border-radius: 5%;
+      margin-top: 50px;
+      margin-left: 5.5px;
+      position: absolute;
+      width: 0;
+      height: 0;
+      border-left: 36px solid transparent;
+      border-right: 36px solid transparent;
+      border-top: 120px solid $light;
+    }
+
+    .nose {
+      border-left: 12px solid transparent;
+      border-radius: 100%;
+      border-right: 12px solid transparent;
+      border-top: 21px solid $dark;
+      height: 0;
+      margin-left: 28px;
+      margin-top: 45px;
+      position: absolute;
+      width: 0;
+      z-index: 1;
+    }
+  }
+
+  //Body
+  @keyframes body {
+    0% {
+      top: -5px;
+    }
+
+    50% {
+      top: 5px;
+    }
+
+    100% {
+      top: -2px;
+    }
+  }
+
+  .body {
+    animation: body 2s infinite alternate;
+    animation-timing-function: ease-out;
+    background-color: $dark;
+    border-radius: 25%;
+    bottom: 0;
+    box-shadow: inset -5px 2px 0 0 $light;
+    height: 250px;
+    left: 0;
+    margin: 130px auto;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 140px;
+
+    .hands {
+      animation: body 1.7s infinite alternate;
+      animation-timing-function: ease-out;
+      background-color: $dark;
+      backface-visibility: hidden;
+      border-radius: 25px;
+      bottom: 0;
+      box-shadow: -1px -4px 0 0 $light;
+      height: 120px;
+      margin: 49px auto auto;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      transform: rotate(45deg);
+      width: 120px;
+      z-index: 2;
+
+      .sleeveFold {
+        background-color: transparent;
+        border-style: solid;
+        border-width: 1px;
+        border-left-color: $light;
+        border-bottom-color: transparent;
+        border-right-color: transparent;
+        border-top-color: transparent;
+        border-radius: 12px 0 0 0;
+        bottom: 0;
+        height: 100px;
+        left: 0;
+        margin: -16px auto auto 36px; //
+        position: absolute;
+        right: 0;
+        top: 0;
+        transform: rotate(-44deg);
+        width: 15px;
+        z-index: 3;
+      }
+    }
+  }
+  //Swirling background
+  @keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+
+    50% {
+      transform: rotate(180deg);
+    }
+
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  @keyframes rotate2 {
+    0% {
+      transform: rotate(0deg);
+      border-top-color: $light;
+    }
+
+    50% {
+      transform: rotate(180deg);
+      border-top-color: $light;
+    }
+
+    100% {
+      transform: rotate(360deg);
+      border-top-color: $light;
+    }
+  }
+
+  .swirl {
+    box-sizing: border-box;
+    display: block;
+    height: 250px;
+    margin: auto;
+    overflow: hidden;
+    position: absolute;
+    width: 250px;
+
+  }
+
+  .swirl,
+  .swirl div {
+    animation: rotate linear 3.5s infinite;
+    animation: rotate2 4s infinite linear;
+    border: 2px solid transparent;
+    border-radius: 50%;
+    bottom: 0;
+    box-sizing: border-box;
+    height: 100%;
+    left: 0;
+    padding: 4px;
+    position: relative;
+    right: 0;
+    top: 0;
+  }
+}

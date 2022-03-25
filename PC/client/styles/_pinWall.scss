@@ -1,0 +1,101 @@
+.pinWall {
+  margin-bottom: 15vh;
+  margin-top: 250px; //collapsed navbar
+
+  //top cards margin with extended navbar
+  @media screen and (min-width: 768px) {
+    margin-top: 80px;
+  }
+
+  /*These media queries center the masonry component on the pinWall
+   * pending resolution to
+   * https://github.com/eiriklv/react-masonry-component/issues/107 */
+  //ONE card per row
+  //width 0 px - 667px
+  @media screen and (min-width: 400px) and (max-width: 667px) {
+    padding-left: 25px;
+  }
+  @media screen and (min-width: 450px) and (max-width: 667px) {
+    padding-left: 50px;
+  }
+  @media screen and (min-width: 500px) and (max-width: 667px) {
+    padding-left: 75px;
+  }
+  @media screen and (min-width: 550px) and (max-width: 667px) {
+    padding-left: 100px;
+  }
+  @media screen and (min-width: 600px) and (max-width: 667px) {
+    padding-left: 125px;
+  }
+  @media screen and (min-width: 650px) and (max-width: 667px) {
+    padding-left: 150px;
+  }
+  //TWO cards per row
+  //width 668px - 991px
+  @media screen and (min-width: 750px) and (max-width: 991px) {
+    padding-left: 25px;
+  }
+  @media screen and (min-width: 800px) and (max-width: 991px) {
+    padding-left: 50px;
+  }
+  @media screen and (min-width: 850px) and (max-width: 991px) {
+    padding-left: 75px;
+  }
+  //THREE cards per row
+  //width 992px - 1364px
+  @media screen and (min-width: 1030px) and (max-width: 1364px) {
+    padding-left: 50px;
+  }
+  @media screen and (min-width: 1080px) and (max-width: 1364px) {
+    padding-left: 75px;
+  }
+  @media screen and (min-width: 1130px) and (max-width: 1364px) {
+    padding-left: 90px;
+  }
+  @media screen and (min-width: 1170px) and (max-width: 1364px) {
+    padding-left: 125px;
+  }
+  @media screen and (min-width: 1200px) and (max-width: 1364px) {
+    padding-left: 150px;
+  }
+  @media screen and (min-width: 1230px) and (max-width: 1364px) {
+    padding-left: 175px;
+  }
+  @media screen and (min-width: 1280px) and (max-width: 1364px) {
+    padding-left: 200px;
+  }
+  //FOUR cards per row
+  //width 1365px - 1539px
+  @media screen and (min-width: 1365px) and (max-width: 1539px) {
+    padding-left: 75px;
+  }
+  @media screen and (min-width: 1415px) and (max-width: 1539px) {
+    padding-left: 100px;
+  }
+  @media screen and (min-width: 1465px) and (max-width: 1539px) {
+    padding-left: 125px;
+  }
+  //FIVE cards per row
+  //width: 1540px - 1839px
+  @media screen and (min-width: 1580px) and (max-width: 1839px) {
+    padding-left: 25px;
+  }
+  @media screen and (min-width: 1625px) and (max-width: 1839px) {
+    padding-left: 50px;
+  }
+  @media screen and (min-width: 1675px) and (max-width: 1839px) {
+    padding-left: 75px;
+  }
+  @media screen and (min-width: 1750px) and (max-width: 1839px) {
+    padding-left: 100px;
+  }
+  @media screen and (min-width: 1825px) and (max-width: 1839px) {
+    padding-left: 150px;
+  }
+  //SIX cards per row
+  //width: 1840px - ?
+  @media screen and (min-width: 1880px) {
+    padding-left: 25px;
+  }
+  //No support beyond this point
+}
