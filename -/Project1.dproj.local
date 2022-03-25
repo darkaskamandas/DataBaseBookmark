@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2021/04/08 13:09:54.000.358,=D:\RadStudio\Unit1.pas</Transaction>
+    <Transaction>2022/03/21 21:21:34.987,=D:\RadStudio\Unit1.pas</Transaction>
+    <Transaction>2022/03/21 21:48:17.599,C:\Users\krist\Desktop\Unit1.pas=D:\RadStudio\Unit1.pas</Transaction>
+    <Transaction>2022/03/21 21:48:17.599,C:\Users\krist\Desktop\Unit1.dfm=D:\RadStudio\Unit1.dfm</Transaction>
+    <Transaction>2022/03/21 21:48:21.046,C:\Users\krist\Desktop\Project1.dproj=D:\RadStudio\Project1.dproj</Transaction>
+  </Transactions>
+</BorlandProject>
